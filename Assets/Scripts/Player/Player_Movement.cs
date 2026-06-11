@@ -108,6 +108,6 @@ public class Player_Movement : MonoBehaviour
         isGrounded = Physics.CheckSphere(GroundCheckSphere.position, GroundCheckRadius, GroundLayer);
     }
 
-
+    // modify add constraint so that backward movement speed is reduced to 60 %
 
 }

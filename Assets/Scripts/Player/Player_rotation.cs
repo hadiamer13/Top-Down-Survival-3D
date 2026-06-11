@@ -7,6 +7,7 @@ public class Player_rotation : MonoBehaviour
     [SerializeField] private LayerMask GroundLayer;
     [SerializeField] private float rotateSpeed = 0.5f;
 
+    public Vector3 lookDirection;
     private Vector3 TargetYPos = Vector3.up;
 
     private Camera camera;
@@ -37,7 +38,7 @@ public class Player_rotation : MonoBehaviour
             // so that player doesnt go into the ground
             targetPosition.y = transform.position.y;
             
-            Vector3 lookDirection = targetPosition - transform.position;
+            lookDirection = targetPosition - transform.position;
 
             // to ensure value doesn't reach 0. it will cause crashes when divided by 0
             if(lookDirection.sqrMagnitude > 0.1f)
